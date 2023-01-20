@@ -1,0 +1,20 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "command": "tsc",
+      "args": [
+        "--esModuleInterop",
+        "--module",
+        "ES2022",
+        "--sourceMap",
+        "--target",
+        "ES2022",
+        "${file}"
+      ],
+      "group": "build",
+      "label": "tsc: build node script"
+    }
+  ]
+}

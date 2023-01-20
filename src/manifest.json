@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "tabcat",
+  "version": "0.0.1",
+  "description": "Sidebar tabs learning experiment.",
+  "permissions": [
+    "tabs"
+  ],
+  "sidebar_action": {
+    "default_title": "tabcat",
+    "default_panel": "sidebar.html",
+    "default_icon": "sidebar_icon.svg",
+    "open_at_install": true
+  }
+}

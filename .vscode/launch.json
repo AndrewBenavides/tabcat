@@ -1,0 +1,35 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch WebExtension",
+      "type": "firefox",
+      "request": "launch",
+      "reAttach": true,
+      "addonPath": "${workspaceFolder}/dist",
+      "url": "https://old.reddit.com",
+      "reloadOnChange": {
+        "watch": "${workspaceFolder}/dist/**/*.js",
+        "ignore": "**/node_modules/**"
+      },
+      "log": {
+        "fileName": "${workspaceFolder}/log.txt",
+        "fileLevel": {
+          "default": "Debug"
+        }
+      }
+    },
+    {
+      "name": "Launch Node TypeScript",
+      "type": "node",
+      "request": "launch",
+      "program": "${fileDirname}/${fileBasenameNoExtension}.mjs",
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "tsc: build node script",
+      "trace": true,
+      "sourceMaps": true,
+      "smartStep": true,
+      "pauseForSourceMap": true,
+    }
+  ]
+}

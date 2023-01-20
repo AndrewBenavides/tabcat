@@ -1,0 +1,18 @@
+{
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "@types/webextension-polyfill": "^0.10.0",
+    "parcel": "^2.8.2",
+    "typescript": "^4.9.4",
+    "web-ext": "^7.4.0",
+    "webextension-polyfill": "^0.10.0"
+  },
+  "scripts": {
+    "preclean": "npm run build:scripts",
+    "clean": "node ./scripts/clean.mjs",
+    "prebuild": "npm run build:scripts",
+    "build": "node ./scripts/build.mjs && npx parcel build ./src/sidebar.html --dist-dir=./dist --log-level=verbose",
+    "build:scripts": "tsc --build scripts",
+    "debug": "web-ext run --source-dir ./dist/ --devtools --start-url https://old.reddit.com --verbose"
+  }
+}
